@@ -5,7 +5,7 @@ import './CardsGrid.scss'
 
 const initiateOpenStates = length => new Array(length).fill(openStateEnum.CLOSED)
 
-const CardGrid = ({ board, getSrcById, onMatch, delay, cardsInRow, cardsInColumn, width, height, cardMargin }) => {
+const CardGrid = ({ board, getSrcById, onMatch, delay, cardsInRow, cardsInColumn, style, cardMargin }) => {
   const [openStates, setOpenStates] = useState(initiateOpenStates(board.length))
 
   const tmpOpened = openStates.reduce((acc, openState, i) => {
@@ -39,15 +39,18 @@ const CardGrid = ({ board, getSrcById, onMatch, delay, cardsInRow, cardsInColumn
 
   const getCardStyle = () => {
     const margin = cardMargin
-    const cardWidth = 100 / cardsInRow - margin + '%'
-    const cardHeight = 100 / cardsInColumn - margin + '%'
+    const cardWidth =`${ 100 / cardsInRow - margin }%`
+    const cardHeight = `${ 100 / cardsInColumn - margin }%`
     return { width: cardWidth, height: cardHeight }
   }
 
   const cardStyle = getCardStyle()
 
   return (
-    <div className='card-grid' style={ { width: width + 'vw', height: height + 'vh' } } >
+    <div
+      className='cards-grid'
+      style={ style }
+    >
       { board.map((id, i) =>
         <Card
           src={ getSrcById(id) }
@@ -68,8 +71,7 @@ CardGrid.defaultProps = {
   delay: 800,
   cardsInRow: 1,
   cardsInColumn: 1,
-  width: 1000,
-  height: 500,
+  style: {},
   cardMargin: 1
 }
 
@@ -80,8 +82,7 @@ CardGrid.propTypes = {
   delay: propTypes.number,
   cardsInRow: propTypes.number,
   cardsInColumn: propTypes.number,
-  width: propTypes.number,
-  height: propTypes.number,
+  style: propTypes.object,
   cardMargin: propTypes.number
 }
 

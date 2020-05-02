@@ -34,7 +34,7 @@ describe('CardsGrid', () => {
       const wrapper = shallow(<CardsGrid />)
 
       it('should not fails to render without props', () => {
-        expect(wrapper.find('.card-grid')).toHaveLength(1)
+        expect(wrapper.find('.cards-grid')).toHaveLength(1)
       })
 
       it('should not render cards', () => {
@@ -47,7 +47,7 @@ describe('CardsGrid', () => {
       const cards = wrapper.find(Card)
 
       it('should not fails to render', () => {
-        expect(wrapper.find('.card-grid')).toHaveLength(1)
+        expect(wrapper.find('.cards-grid')).toHaveLength(1)
       })
 
       it('should not render cards', () => {
