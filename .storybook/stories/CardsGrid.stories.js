@@ -12,9 +12,9 @@ export const Grid = () => (
     delay={ number('Delay', 800) }
     cardsInRow={ number('Cards in row', 6) }
     cardsInColumn={ number('Cards in column', 5) }
-    width={ number('Width', 1000) }
-    height={ number('Height', 500) }
-    cardMargin={ number('Margin', 1) }
+    width={ number('Width', 70) }
+    height={ number('Height', 70) }
+    cardMargin={ number('Margin', 0.6) }
   />
 )
 
