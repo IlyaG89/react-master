@@ -1,0 +1,29 @@
+.card {
+  display: inline-block;
+  border-radius: 10%;
+  vertical-align: top;
+  cursor: not-allowed;
+
+  .card-image {
+    height: inherit;
+    width: inherit;
+    display: none;
+  }
+
+  &:not(.opened) {
+    background-color: rebeccapurple;
+    cursor: pointer;
+  }
+
+  &.opened {
+    .card-image {
+      display: block;
+    }
+  }
+
+  &.transparent {
+    .card-image {
+      opacity: 0.2;
+    }
+  }
+}

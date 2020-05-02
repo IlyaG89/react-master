@@ -1,0 +1,9 @@
+export const WIDTH = 6
+export const HEIGHT = 5
+export const NUMBER_OF_INDEXES = 25
+export const MIX_FACTOR = 5
+export const DELAY = 800
+export const SCORE_BONUS = 10
+export const GRID_WIDTH = 1000
+export const GRID_HEIGHT = 500
+export const MARGIN = 1
