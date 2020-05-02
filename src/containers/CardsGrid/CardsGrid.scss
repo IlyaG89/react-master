@@ -1,8 +1,22 @@
+//.cards-grid-container {
+//  height: 70vh;
+//  width: 70vw;
+//
+//  .cards-grid {
+//    height: 100%;
+//    width: 100%;
+//
+//    display: flex;
+//    justify-content: space-between;
+//    flex-wrap: wrap;
+//  }
+//}
+
 .cards-grid {
+  height: 100%;
+  width: 100%;
+
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-
-  width: 70vw;
-  height: 70vh;
 }
